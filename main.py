@@ -1,7 +1,16 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 import uvicorn
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Ajusta el puerto según tu React
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
