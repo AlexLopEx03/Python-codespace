@@ -6,7 +6,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Ajusta el puerto según tu React
+    allow_origins=["http://localhost:5173"],  # Ajusta el puerto según tu React
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
