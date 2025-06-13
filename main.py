@@ -4,9 +4,11 @@ import uvicorn
 
 app = FastAPI()
 
+origins = ["https://improved-waddle-q7v66j6qr99rf9w56-5173.app.github.dev", "http://localhost:5173"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Ajusta el puerto según tu React
+    allow_origins=origins,  # Ajusta el puerto según tu React
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
